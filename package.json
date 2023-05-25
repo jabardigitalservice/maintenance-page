@@ -1,21 +1,20 @@
 {
   "name": "jds-maintenance-page",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "author": {
+    "name": "Jabar Digital Service",
+    "email": "digitalservice@jabarprov.go.id",
+    "url": "https://digitalservice.jabarprov.go.id"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.3",
-    "@tsconfig/svelte": "^4.0.1",
-    "svelte": "^3.57.0",
-    "svelte-check": "^2.10.3",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "@types/node": "^18",
+    "nuxt": "^3.5.1"
   }
 }
