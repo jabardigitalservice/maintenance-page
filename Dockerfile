@@ -1,15 +1,15 @@
-FROM node:16-alpine AS build
+FROM node:16.13.0-alpine3.14
 
 WORKDIR /app
-
-COPY package.json ./
+COPY package*.json ./
 RUN npm install
-COPY . ./
-# RUN npm run build
+COPY . .
 
-# FROM nginx:alpine
-# COPY --from=build /app/dist /usr/share/nginx/html
-ENV HOST=0.0.0.0
-EXPOSE 8080
+ENV HOST 0.0.0.0
+ENV PORT 3000
 
-CMD [ "npm", "run", "dev" ]
+RUN npm run build
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
