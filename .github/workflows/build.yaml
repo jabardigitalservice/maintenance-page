@@ -5,8 +5,6 @@ name: JDS Maintenance Page
 on:
   push:
     branches: [main, sites/*]
-    paths:
-      - 'simple-page/**'
 
 jobs:
   deploy:
