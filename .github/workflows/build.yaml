@@ -33,8 +33,9 @@ jobs:
 
         # Build the Docker image
       - name: Set version tag
-        id: vars
-        run: echo "branch_name=${GITHUB_HEAD_REF:-${GITHUB_REF#sites/}}" >> $GITHUB_ENV
+        shell: bash
+        run: echo "branch_name=${GITHUB_HEAD_REF:-${GITHUB_REF#sites/}}" >> $GITHUB_OUTPUT
+        id: branch
 
       - name: Build and push
         id: docker_build
@@ -43,4 +44,4 @@ jobs:
           context: .
           file: simple-page/Dockerfile
           push: true
-          tags: ${{ secrets.SERVICE_IMAGENAME }}:${{ env.branch_name }}
+          tags: ${{ secrets.SERVICE_IMAGENAME }}:${{ steps.branch.outputs.branch_name }}
