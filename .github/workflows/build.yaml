@@ -4,7 +4,7 @@ name: JDS Maintenance Page
 
 on:
   push:
-    branches: [main, sites/*]
+    branches: [main]
 
 jobs:
   deploy:
@@ -40,6 +40,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: simple-page/Dockerfile
+          file: Dockerfile
           push: true
-          tags: ${{ secrets.SERVICE_IMAGENAME }}:${{ env.BRANCH }}
+          tags: ${{ secrets.SERVICE_IMAGENAME }}:maintenance
