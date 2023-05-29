@@ -42,4 +42,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ secrets.SERVICE_IMAGENAME }}:maintenance
+          tags: ${{ secrets.SERVICE_IMAGENAME }}:0.1
