@@ -42,4 +42,4 @@ jobs:
           context: .
           file: simple-page/Dockerfile
           push: true
-          tags: ${{ secrets.SERVICE_IMAGENAME }}:${GITHUB_REF#sites/}
+          tags: ${{ secrets.SERVICE_IMAGENAME }}:${GITHUB_REF##sites/}
