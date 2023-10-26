@@ -11,9 +11,9 @@
         />
       </div>
       <p class="font-lora text-[21px] leading-[34px] text-green-700 font-bold mb-4 text-center">
-        Oops, {{ targetUser }} sedang dalam tahap pemeliharaan sejak {{ startDate }}. Kami mohon maaf atas
+        Ooopsss, aplikasi <b>{{ targetUser }}</b> sedang dalam tahap pemeliharaan sejak <b>{{ startDate }}</b>. Kami mohon maaf atas
         ketidaknyamanan nya, pemeliharaan ini dijadwalkan selesai pada
-        {{ endDate }}.
+        <b>{{ endDate }}</b>.
       </p>
       <p>
         Pemeliharaan ini merupakan bagian dari upaya kami untuk meningkatkan kualitas layanan dan integritas keamanan sistem.
